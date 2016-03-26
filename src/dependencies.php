@@ -17,3 +17,8 @@ $container['logger'] = function ($c) {
     $logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], Monolog\Logger::DEBUG));
     return $logger;
 };
+
+$twig = new Twig_Environment(
+    new Twig_Loader_Filesystem(__DIR__.'/../templates'),
+    array()
+);

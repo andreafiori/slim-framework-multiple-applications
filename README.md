@@ -1,21 +1,18 @@
-# Slim Framework 3 Skeleton Application
+# Slim Framework 3
 
-Use this skeleton application to quickly setup and start working on a new Slim Framework 3 application. This application uses the latest Slim 3 with the PHP-View template renderer. It also uses the Monolog logger.
-
-This skeleton application was built for Composer. This makes setting up a new Slim Framework application quick and easy.
+Based on the skeleton application, this project include the dependencies to let a developer work with Twig, 
+databases, modules and a small MVC architecture.  
 
 ## Install the Application
 
-Run this command from the directory in which you want to install your new Slim Framework application.
+Run this command from the directory in which you want to install the application.
 
-    php composer.phar create-project slim/slim-skeleton [my-app-name]
+    php install
 
-Replace `[my-app-name]` with the desired directory name for your new application. You'll want to:
+You'll want to:
 
 * Point your virtual host document root to your new application's `public/` directory.
 * Ensure `logs/` is web writeable.
-
-That's it! Now go build something cool.
 
 ## Resources
 - [Slim official website](http://www.slimframework.com/)
@@ -28,7 +25,20 @@ That's it! Now go build something cool.
 	- Doctrine 2
 	- [Eloquent Oci8](ttps://github.com/yajra/laravel-oci8)	
 	- [Eloquent, Slim, Twig](http://fullstackstanley.com/read/using-eloquent-twig-and-slim-php)
+- Multilingual \ Internationalization
+    - [https://github.com/briannesbitt/Slim-Multilingual](https://github.com/briannesbitt/Slim-Multilingual)
 
-## Testing
-cd test
-phpunit --bootstrap bootstrap.php . --stop-on-failure
+## Unit tests with PHPUnit
+
+From the command line:
+    
+    cd test
+    phpunit --bootstrap bootstrap.php . --stop-on-failure
+
+## TODO
+
+- Load plugin
+- Load widgets
+- Load message and translation
+- Implement controller
+- Load view from modules

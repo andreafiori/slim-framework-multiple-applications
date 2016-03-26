@@ -1,18 +1,18 @@
-<!doctype html>
-<html>
-<head>
-    <title>Slim 3</title>
-    <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
-</head>
-<body>
+{% extends "base.twig" %}
 
-<div class="container">
+{% block title %}{% endblock %}
 
-    <h3>Mutliple Slim 3 Applications</h3>
+{% block content %}
+    <div class="container">
 
-    <p>Slim Application with MVC architecture, Modules, Twig views</p>
+        <h1>Multiple apps with Slim framework</h1>
 
-</div>
+        {% if name != '' %}
+            <h2>Hello {{ name|escape }}!</h2>
+        {% else %}
+            <p>Just another web application!</p>
+        {% endif %}
 
-</body>
-</html>
+        <p><a href="{{ path_for('hello') }}" title="Hello page">&raquo; Hello page</a></p>
+    </div>
+{% endblock %}

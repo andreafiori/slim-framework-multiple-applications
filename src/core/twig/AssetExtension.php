@@ -23,19 +23,23 @@ class AssetExtension extends \Twig_Extension
      * Return the relative path to the asset directory
      *
      * @param string $string
-     * @return int
+     * @return string
      */
     public function asset($filePath)
     {
-        $basePath = str_replace($_SERVER['DOCUMENT_ROOT'], '', getcwd());
+        $currentPath = str_replace(
+            'src/core/twig',
+            '',
+            preg_replace('/^' . preg_quote($_SERVER['DOCUMENT_ROOT'], '/') . '/', '', __DIR__)
+        );
 
-        if ( !preg_match("/\/$/", $basePath) ) {
-            $basePath .= '/';
+        if ( !preg_match("/\/$/", $currentPath) ) {
+            $currentPath .= '/';
         }
 
-        $basePath .= 'assets/';
+        $currentPath .= 'public/assets/';
 
-        return $basePath.$filePath;
+        return $currentPath.$filePath;
     }
 
     /**
@@ -43,6 +47,6 @@ class AssetExtension extends \Twig_Extension
      */
     public function getName()
     {
-        return 'my_bundle';
+        return 'asset';
     }
 }

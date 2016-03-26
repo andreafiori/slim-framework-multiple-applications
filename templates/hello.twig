@@ -1,0 +1,13 @@
+{% extends "base.twig" %}
+
+{% block title %}Hello World!{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h3>Mutliple Slim 3 Applications</h3>
+
+        <p>Slim Application with MVC architecture, Modules, Twig views</p>
+
+        <p><a href="{{ path_for('homepage', { 'name': 'andrea' }) }}">&laquo; Back to the home page</a></p>
+    </div>
+{% endblock %}

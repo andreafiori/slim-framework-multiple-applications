@@ -12,18 +12,10 @@ require __DIR__ . '/../vendor/autoload.php';
 
 session_start();
 
-use core\twig\AssetExtension;
-
 // Instantiat the app
 $settings = require __DIR__ . '/../src/settings.php';
 
 $app = new \Slim\App($settings);
-
-$twig = new Twig_Environment(
-    new Twig_Loader_Filesystem(__DIR__.'/../templates'),
-    array()
-);
-$twig->addExtension( new AssetExtension() );
 
 // Set up dependencies
 require __DIR__ . '/../src/dependencies.php';
