@@ -2,10 +2,7 @@
 
 namespace core\base;
 
-class App
+class App extends \Slim\App
 {
-	public function __construct()
-	{
-		
-	}
+
 }
