@@ -7,7 +7,8 @@ databases, modules and a small MVC architecture.
 
 Run this command from the directory in which you want to install the application.
 
-    php install
+    composer install
+    composer dumpautoload
 
 You'll want to:
 
@@ -23,22 +24,9 @@ From the command line:
 
 ## TODO
 
+- Test fix. Update PHPUnit version
 - Load plugin
 - Load widgets
 - Load message and translation
 - Implement controller
 - Load view from modules
-
-## Resources
-- [Slim official website](http://www.slimframework.com/)
-- [Akrabat Slim 3 skeleton app](https://github.com/akrabat/slim3-skeleton)
-	- [Doctrine Integration](http://blog.sub85.com/slim-3-with-doctrine-2.html)
-- Controllers using Slim
-	- [Automatic Controllers](http://juliangut.com/blog/slim-controller)
-	- [Slim Controllers](https://github.com/fortrabbit/slimcontroller)
-- Database
-	- Doctrine 2
-	- [Eloquent Oci8](ttps://github.com/yajra/laravel-oci8)	
-	- [Eloquent, Slim, Twig](http://fullstackstanley.com/read/using-eloquent-twig-and-slim-php)
-- Multilingual \ Internationalization
-    - [https://github.com/briannesbitt/Slim-Multilingual](https://github.com/briannesbitt/Slim-Multilingual)
